@@ -4,17 +4,17 @@
         id          = "com.xactware.xa.tdhale.Directory"
         versionCode = "10"
         version     = "1.1.0">
- 
+
     <name>Employee Directory</name>
- 
+
     <description>
         A simple employee directory application
     </description>
- 
+
     <author href="http://xactware.com" email="tdhale@xactware.com">
         Todd Hale
     </author>
- 
+
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
     <feature name="http://api.phonegap.com/1.0/file"/>
@@ -22,5 +22,6 @@
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
- 
+    <gap:plugin name="org.apache.cordova.camera" version="0.2.3" />
+
 </widget>
