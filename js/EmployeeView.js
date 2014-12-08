@@ -49,7 +49,7 @@ var EmployeeView = function(employee) {
 	        return;
 	    }
 	    var options =   {   quality: 50,
-	                        destinationType: Camera.DestinationType.DATA_URL,
+	                        destinationType: destinationType.DATA_URL,
 	                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
 	                        encodingType: 0     // 0=JPG 1=PNG
 	                    };
@@ -71,3 +71,15 @@ var EmployeeView = function(employee) {
 }
 
 EmployeeView.template = Handlebars.compile($("#employee-tpl").html());
+
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
